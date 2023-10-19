@@ -8,6 +8,7 @@ import AddProduct from "../pages/AddProduct/AddProduct";
 import MyCart from "../pages/MyCart/MyCart";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import BrandProducts from "../pages/BrandProducts/BrandProducts";
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/mycart',
-                element: <MyCart></MyCart>
+                element:<MyCart></MyCart>
             },
             {
                 path:'/login',
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/feature/:id',
+                element:<BrandProducts></BrandProducts>,
+                loader: () => fetch('/data.json')
             }
         
         ]

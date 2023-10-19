@@ -2,31 +2,51 @@
   {
     "name": "Apple",
     "id": 101,
-    "image": "https://i.ibb.co/FzN46L1/apple-4-logo-png-transparent.png"
+    "image": "https://i.ibb.co/FzN46L1/apple-4-logo-png-transparent.png",
+    "commercial_image1":"https://i.ibb.co/CV2vKrF/apple-mac.png",
+    "commercial_image2":"https://i.ibb.co/zQDdMQV/apple-phone.jpg",
+    "commercial_image3":"https://i.ibb.co/qyhqvJj/apple-watch.webp"
+
   },
   {
     "name": "Sony",
     "id": 102,
-    "image": "https://i.ibb.co/F0FdRD6/sony.jpg"
+    "image": "https://i.ibb.co/F0FdRD6/sony.jpg",
+    "commercial_image1":"https://i.ibb.co/f2cCd2b/sony-fridge.webp",
+    "commercial_image2":"https://i.ibb.co/mqYwV1t/sony-headphones.webp",
+    "commercial_image3":"https://i.ibb.co/cCYCdxb/sony-tv.jpg"
   },
+  
   {
     "name": "Samsung",
     "id": 103,
-    "image": "https://i.ibb.co/pfGbmBJ/samsung-logo.png"
+    "image": "https://i.ibb.co/pfGbmBJ/samsung-logo.png",
+    "commercial_image1":"https://i.ibb.co/ygksrJ4/samsung-havc.webp",
+    "commercial_image2":"https://i.ibb.co/sV8K2Kp/samsung-phone.webp",
+    "commercial_image3":"https://i.ibb.co/G3Cy89N/samsung-ipad.webp "
   },
   {
     "name": "Panasonic",
     "id": 104,
-    "image": "https://i.ibb.co/7jn72Ny/panasonic.webp"
+    "image": "https://i.ibb.co/7jn72Ny/panasonic.webp",
+    "commercial_image1":"https://i.ibb.co/5h3v8k3/panasonic-camera.webp",
+    "commercial_image2":"https://i.ibb.co/4WTRDJx/panasonic-cc.png",
+    "commercial_image3":"https://i.ibb.co/Qp4GYWs/panasonic-phone.jpg "
   },
   {
     "name": "LG",
     "id": 105,
-    "image": "https://i.ibb.co/0ZVS7cQ/LG.png"
+    "image": "https://i.ibb.co/0ZVS7cQ/LG.png",
+    "commercial_image1":"https://i.ibb.co/j8XdxgM/lg-bike.jpg",
+    "commercial_image2":"https://i.ibb.co/bKnZvfC/lg-drone.jpg",
+    "commercial_image3":"https://i.ibb.co/KbwQXJX/lg-tv.webp"
   },
   {
     "name": "Intel",
     "id": 106,
-    "image": "https://i.ibb.co/4Z8PNMD/intel.png"
+    "image": "https://i.ibb.co/4Z8PNMD/intel.png",
+    "commercial_image1":"https://i.ibb.co/BndymhC/intel-hard-disk.jpg",
+    "commercial_image2":"https://i.ibb.co/G3yZHFw/intel-laptop.jpg",
+    "commercial_image3":"https://i.ibb.co/M1cxPMH/intel-phone.png"
   }
 ]
