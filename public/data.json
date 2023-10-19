@@ -1,35 +1,32 @@
-{
-    "items": [
-      {
-        "name": "Apple",
-        "id": 101,
-        "image": "https://i.ibb.co/87ttBHP/Apple-Logo.png"
-      },
-      {
-        "name": "Sony",
-        "id": 102,
-        "image": "https://i.ibb.co/F0FdRD6/sony.jpg"
-      },
-      {
-        "name": "Samsung",
-        "id": 103,
-        "image": "https://i.ibb.co/pfGbmBJ/samsung-logo.png"
-      },
-      {
-        "name": "Panasonic",
-        "id": 104,
-        "image": "https://i.ibb.co/7jn72Ny/panasonic.webp"
-      },
-      {
-        "name": "LG",
-        "id": 105,
-        "image": "https://i.ibb.co/0ZVS7cQ/LG.png"
-      },
-      {
-        "name": "Intel",
-        "id": 106,
-        "image": "https://i.ibb.co/4Z8PNMD/intel.png"
-      }
-    ]
+[
+  {
+    "name": "Apple",
+    "id": 101,
+    "image": "https://i.ibb.co/FzN46L1/apple-4-logo-png-transparent.png"
+  },
+  {
+    "name": "Sony",
+    "id": 102,
+    "image": "https://i.ibb.co/F0FdRD6/sony.jpg"
+  },
+  {
+    "name": "Samsung",
+    "id": 103,
+    "image": "https://i.ibb.co/pfGbmBJ/samsung-logo.png"
+  },
+  {
+    "name": "Panasonic",
+    "id": 104,
+    "image": "https://i.ibb.co/7jn72Ny/panasonic.webp"
+  },
+  {
+    "name": "LG",
+    "id": 105,
+    "image": "https://i.ibb.co/0ZVS7cQ/LG.png"
+  },
+  {
+    "name": "Intel",
+    "id": 106,
+    "image": "https://i.ibb.co/4Z8PNMD/intel.png"
   }
-  
+]

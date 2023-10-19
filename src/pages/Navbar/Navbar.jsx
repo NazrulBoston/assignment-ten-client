@@ -26,7 +26,7 @@ const Navbar = () => {
 
                         <li>
                             <NavLink
-                                to="/donation"
+                                to="/addproduct"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-blue-600 underline" : ""
                                 }
@@ -38,7 +38,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/statistics"
+                                to="/mycart"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-blue-600 underline" : ""
                                 }
@@ -50,12 +50,24 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/statistics"
+                                to="/login"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-blue-600 underline" : ""
                                 }
                             >
                                 Login
+                            </NavLink>
+
+
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/register"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-blue-600 underline" : ""
+                                }
+                            >
+                                Register
                             </NavLink>
 
 
