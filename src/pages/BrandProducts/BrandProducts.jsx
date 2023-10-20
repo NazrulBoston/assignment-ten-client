@@ -10,7 +10,7 @@ const BrandProducts = () => {
     return (
         <div className="w-10/12 mx-auto">
             <Navbar></Navbar>
-            <div className="carousel w-full h-[80vh]">
+            <div className="carousel w-3/4 h-[60vh] lg:ml-40 mt-8">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={filterProducts.commercial_image1} className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
