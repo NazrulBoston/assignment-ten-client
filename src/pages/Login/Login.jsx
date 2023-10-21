@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 
 
@@ -15,6 +17,15 @@ const Login = () => {
         const email = form.get(('email'))
         const password = form.get(('password'))
         console.log(email, password)
+
+        //create user
+        createUserWithEmailAndPassword(auth, email, password)
+        .then(result => {
+            console.log(result);
+        })
+        .then(error => {
+            console.log(error);
+        })
        
     
     }

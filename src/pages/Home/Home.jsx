@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
 
+
 const Home = () => {
     return (
         <div className="w-10/12 mx-auto">
@@ -28,9 +29,11 @@ const Home = () => {
             <div>
                 <Features></Features>
             </div>
+          
             <div className="mt-8">
                 <Footer></Footer>
             </div>
+
 
         </div>
     );
