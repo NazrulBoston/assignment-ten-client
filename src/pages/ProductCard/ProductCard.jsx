@@ -1,8 +1,10 @@
+import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 
 const ProductCard = ({ brandCard }) => {
     const { name, brandName, type, description, price, rating, image, _id } = brandCard;
+   
     return (
         <div className="card bg-base-100 shadow-xl">
             <figure><img className="w-full h-[250px]" src={image} alt="Shoes" /></figure>
@@ -13,10 +15,14 @@ const ProductCard = ({ brandCard }) => {
                 </h2>
                 <p>${price}</p>
                 <p>{type}</p>
-                <p>{rating}</p>
+                <p className="flex justify-center">
+                    <span><Rating style={{ maxWidth: 100 }}
+                         readOnly halfFillMode='svg' value={rating} /></span>
+                    <span> {rating}</span>
+                </p>
                 <div className="card-actions justify-end">
 
-                    <Link to = {`/update/${_id}`}>
+                    <Link to={`/update/${_id}`}>
                         <button className="btn btn-primary">Update</button>
                     </Link>
 

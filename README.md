@@ -1,8 +1,24 @@
-# React + Vite
+# Name of the website: VERIFIED ELECTRICAL
+Live link : 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 1. The first feature is user authentication.
 
-Currently, two official plugins are available:
+Allow people to register and log in by implementing user registration and login features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 2. Get data form database 
+
+get data from mongoDB database
+
+# 3. Google Sign-In:
+
+Allow people to sign in using their Google accounts by integrating Google Sign-In.
+
+# 4. Card Details Page
+
+Make a page where users may access comprehensive information regarding a chosen card.
+Obtain card information from your database or local storage, then display it on this page.
+# 5. Cart or Wishlist:
+
+Permit customers to add cards to their shopping cart or wish list.
+Put the cards you've chosen in localStorage.
+Implement functions like item addition and removal and price calculation.

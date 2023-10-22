@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
 
-const CartCard = ({ cart }) => {
+const CartCard = ({ cart, data, setData }) => {
     const { image, name, price, type, brandName, _id } = cart;
 
     const handleDelete = (_id) => {
@@ -31,8 +31,11 @@ const CartCard = ({ cart }) => {
                                 'Your file has been deleted.',
                                 'success'
                             )
+                            const remaining = data.filter(card => card._id !== _id)
+                            setData(remaining)
 
                         }
+                        
 
                     })
 
@@ -50,7 +53,7 @@ const CartCard = ({ cart }) => {
                 <div className="card-actions justify-end">
                     <button
                         onClick={() => handleDelete(_id)} className="btn btn-primary">Delete
-                    </button>
+                        </button>
                 </div>
             </div>
         </div>
