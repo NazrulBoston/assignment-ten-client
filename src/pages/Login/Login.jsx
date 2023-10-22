@@ -1,34 +1,63 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import auth from "../../firebase/firebase.config";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 
 
 
 
 const Login = () => {
-   
-
+    const { signInUser, signInWithGoogle, } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleLogin = e => {
-        e.preventDefault(); 
+        e.preventDefault();
         console.log(e.currentTarget)
         const form = new FormData(e.currentTarget);
         const email = form.get(('email'))
         const password = form.get(('password'))
         console.log(email, password)
 
+        if (password.length < 6) {
+            toast("Password is less than 6 characters")
+            return
+        } else if (!/[A-Z]/.test(password)) {
+            toast('Password do not have a capital letter');
+            return
+        } else if (!/[!@#$%^&*]/.test(password)) {
+            toast('Password do not have a special character');
+            return
+        }
+
         //create user
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            console.log(result);
-        })
-        .then(error => {
-            console.log(error);
-        })
-       
-    
+        signInUser(email, password)
+            .then(result => {
+                toast.success('User created successfully!')
+                navigate('/')
+                console.log(result);
+            })
+            .then(error => {
+                console.log(error);
+            })
+
+
     }
+
+    const handleSocial = (media) => {
+        media()
+            .then(result => {
+                console.log(result.user)
+                toast.success("Login Successfully")
+                navigate("/")
+
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
+
 
     return (
         <div className="w-10/12 mx-auto">
@@ -54,12 +83,14 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
+                            <button onClick={() => handleSocial(signInWithGoogle)} className="btn btn-primary mt-6">Google</button>
                         </div>
                     </form>
-                    <p className="text-center mb-6">Do not have an account <Link to ="/register"><span className="border-2 rounded bg-slate-200 text-blue-600 px-1">Register</span></Link></p>
+                    <p className="text-center mb-6">Do not have an account <Link to="/register"><span className="border-2 rounded bg-slate-200 text-blue-600 px-1">Register</span></Link></p>
+                    
                 </div>
             </div>
-            
+
         </div>
     );
 };

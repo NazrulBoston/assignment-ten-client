@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Features from "../Features/Features";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import OurServices from "../OurServices/OurServices";
+import DealOffer from "../DealOffer/DealOffer";
 
 
 
@@ -16,7 +18,7 @@ const Home = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+                            <h1 className="mb-5 text-5xl font-bold text-blue-300">Verified Electrical</h1>
                             <p className="mb-5">An electrical company is a business or organization that specializes in providing a wide range of electrical services, products, and solutions to residential, commercial, and industrial customers</p>
                             <Link to="/register">
                                 <button className="btn btn-primary">Get Started</button>
@@ -31,6 +33,15 @@ const Home = () => {
             </div>
           
             <div className="mt-8">
+                <OurServices></OurServices>
+            </div>
+
+            <div className="mt-8 mb-8">
+
+                <div className="mb-8">
+                    <DealOffer></DealOffer>
+                </div>
+
                 <Footer></Footer>
             </div>
 

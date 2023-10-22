@@ -2,10 +2,11 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
+import Footer from "../Footer/Footer";
 
 
 
-//http://localhost:501/products
+
 
 const BrandProducts = () => {
     const brandProducts = useLoaderData();
@@ -13,7 +14,7 @@ const BrandProducts = () => {
     const filterProducts = brandProducts.find(brand => brand.id == id)
     console.log(filterProducts)
     const [products, setProducts] = useState([])
-  
+
     useEffect(() => {
         fetch(`http://localhost:501/products`)
             .then(res => res.json())
@@ -48,15 +49,21 @@ const BrandProducts = () => {
                         <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-               
+
             </div>
-            <div className="grid lg:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div>
                 {
-                    brandCards.map(brandCard => <ProductCard
-                    key={brandCard._id} brandCard={brandCard}
-                    ></ProductCard>)
+                    brandCards.length === 0 ? <p className="mt-8 mb-8 text-center text-5xl font-bold">Product not found</p>:
+                        <div className="grid lg:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                            {
+                                 brandCards.map(brandCard => <ProductCard
+                                    key={brandCard._id} brandCard={brandCard}
+                                    ></ProductCard>)
+                            }
+                        </div>
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };

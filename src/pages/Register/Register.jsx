@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import auth from "../../firebase/firebase.config";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
+
+    const navigate = useNavigate()
+
+    const { createUser } = useContext(AuthContext)
 
 
     const handleRegister = e => {
@@ -18,17 +24,42 @@ const Register = () => {
         const password = form.get('password')
 
         console.log(name, photo, email, password)
+        if (password.length < 6) {
+            toast("Password is less than 6 characters")
+            return
+        } else if (!/[A-Z]/.test(password)) {
+            toast('Password do not have a capital letter');
+            return
+        } else if (!/[!@#$%^&*]/.test(password)) {
+            toast('Password do not have a special character');
+            return
+        }
 
 
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            console.log(result);
-        })
-        .then(error => {
-            console.log(error);
-        })
+        createUser(email, password)
+            .then(result => {
+                console.log(result);
+                const user = result.user;
+                toast.success('Successfully user created!')
+                updateProfile(user, {
+                    displayName: name, photoURL: photo
+                }).then(() => {
+                    toast.success('User Profile Updated');
+                    navigate('/')
 
-      
+
+                }).catch(error => {
+                    console.error(error);
+
+                })
+               
+            })
+            .then(error => {
+                console.log(error);
+
+            })
+
+
     }
 
     return (
