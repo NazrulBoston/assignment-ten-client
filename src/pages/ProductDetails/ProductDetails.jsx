@@ -19,7 +19,7 @@ const ProductDetails = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:501/cart`)
+        fetch(`https://assignment-ten-server-phi-ecru.vercel.app/cart`)
             .then(res => res.json())
             .then(data => setAllCarts(data))
     }, [allCarts])
@@ -31,7 +31,7 @@ const ProductDetails = () => {
         const isExist = getCartCards.find(cartCard => cartCard._id === productDetails._id)
         if (!isExist) {
             const cartData = {...data, email: user?.email}
-            fetch(`http://localhost:501/cart`, {
+            fetch(`https://assignment-ten-server-phi-ecru.vercel.app/cart`, {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

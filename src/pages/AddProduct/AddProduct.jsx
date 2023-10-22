@@ -21,7 +21,7 @@ const AddProduct = () => {
 
 
         //send data to server
-        fetch('http://localhost:501/products', {
+        fetch('https://assignment-ten-server-phi-ecru.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

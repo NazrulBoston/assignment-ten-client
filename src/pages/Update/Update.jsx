@@ -25,7 +25,7 @@ const Update = () => {
 
 
         //send data to server
-        fetch(`http://localhost:501/products/${_id}`, {
+        fetch(`https://assignment-ten-server-phi-ecru.vercel.app/products/${_id}`, {
             method:'PUT',
             headers:{
                 'content-type':'application/json'

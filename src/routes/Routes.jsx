@@ -36,12 +36,12 @@ const router = createBrowserRouter([
             {
                 path:'/update/:id',
                 element:<PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:501/products/${params.id}`)
+                loader: ({params}) => fetch(`https://assignment-ten-server-phi-ecru.vercel.app/products/${params.id}`)
             },
             {
                 path:'/mycart',
                 element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch(`http://localhost:501/cart`)
+                loader: () => fetch(`https://assignment-ten-server-phi-ecru.vercel.app/cart`)
             },
             {
                 path:'/login',
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
             {
                 path:'/products/:id',
                 element:<PrivateRoute> <ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:501/products/${params.id}`)
+                loader: ({params}) => fetch(`https://assignment-ten-server-phi-ecru.vercel.app/products/${params.id}`)
             },
 
         

@@ -16,7 +16,7 @@ const BrandProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:501/products`)
+        fetch(`https://assignment-ten-server-phi-ecru.vercel.app/products`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
